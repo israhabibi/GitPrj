@@ -124,6 +124,7 @@ for row in query_job:
     thedata.append((row.order_date, row.no_of_service, row.total_customer, 
          row.order_type, row.total_customer_per_order_type, row.order_payment))
 
+#open file json
 with open("Question2.json", 'w') as f:
     for data in thedata :
         f.write(str(data)+ '\n')
