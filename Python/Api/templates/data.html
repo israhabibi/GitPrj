@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Display</title>
+</head>
+<body>
+    <h1>Data Display</h1>
+    <table border="1">
+        <tr>
+            <th>Temperature</th>
+            <th>Humidity</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.temperature }}</td>
+            <td>{{ item.humidity }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
