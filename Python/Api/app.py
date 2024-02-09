@@ -31,10 +31,10 @@ def receive_data():
 def display_data():
    conn = create_connection()
    cursor = conn.cursor()
-   cursor.execute("SELECT temperature, humidity, timestamp FROM sensor_data")
-   data = cursor.fetchall()
+   cursor.execute("SELECT timestamp, temperature, humidity FROM sensor_data")
+   data_ = cursor.fetchall()
    conn.close()
-   return render_template('data.html', data=data)
+   return render_template('data.html', data=data_)
 
 if __name__ == '__main__':
-   app.run(debug=True)
+   app.run(host='0.0.0.0',port=5000)
